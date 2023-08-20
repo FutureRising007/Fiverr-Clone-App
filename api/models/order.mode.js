@@ -6,16 +6,27 @@ const OrderSchema = new Schema({
         type: String, 
         required: true,
     },
-    userID: {
+    img: {
+        type: String, 
+        required: false,
+    },
+    price: {
+        type: Number, 
+        required: true,
+    },
+    sellerID: {
         type: String, 
         required: true,
     },
-    star: {
-        type: Number, 
+    buyerID: {
+        type: String, 
         required: true,
-        enum: [1,2,3,4,5],
     },
-    desc: {
+    isCompleted: {
+        type: Boolean, 
+        default: false,
+    },
+    payment_intent: {
         type: String, 
         required: true,
     },
