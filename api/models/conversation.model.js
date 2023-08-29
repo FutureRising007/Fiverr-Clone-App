@@ -1,35 +1,37 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 const { Schema } = mongoose;
 
-const ConversationSchema = new Schema({
-    id : {
-        type: String, 
-        required: true, 
-        unique: true,
-    }, 
-    sellerID : {
-        type: String, 
-        required: true, 
+const ConversationSchema = new Schema(
+  {
+    id: {
+      type: String,
+      required: true,
+      unique: true,
     },
-    buyerID : {
-        type: String, 
-        required: true, 
-        unique: true,
+    sellerId: {
+      type: String,
+      required: true,
     },
-    readBySeller : {
-        type: Boolean, 
-        required: true, 
+    buyerId: {
+      type: String,
+      required: true,
     },
-    readByBuyer : {
-        type: Boolean, 
-        required: true, 
+    readBySeller: {
+      type: Boolean,
+      required: true,
     },
-    lastMessage : {
-        type: String, 
-        required: false,
+    readByBuyer: {
+      type: Boolean,
+      required: true,
     },
-}, {
-    timestamps: true
-});
+    lastMessage: {
+      type: String,
+      required: false,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
 
-export default mongoose.model("Conversation" , ConversationSchema);
+export default mongoose.model("Conversation", ConversationSchema);

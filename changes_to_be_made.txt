@@ -1,0 +1,2 @@
+1. Cloudinary ki link generate krke ussmein replace krna hai 
+2. Gigs mein create post taking too much time for Postman
