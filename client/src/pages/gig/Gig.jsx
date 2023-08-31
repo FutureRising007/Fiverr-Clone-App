@@ -99,7 +99,7 @@ function Gig() {
                         </span>
                       </div>
                     )}
-                    <button>Contact Me</button>
+                    <button>Contact Me</button> 
                   </div>
                 </div>
                 <div className="box">
