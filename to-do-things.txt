@@ -1,2 +1,3 @@
 1. Gigs functionality of post and get is not working.
 2. Gig mein , buyer seller se contact and chat kr ske via "Contact Me" Button
+3. Chat tutorial not working.

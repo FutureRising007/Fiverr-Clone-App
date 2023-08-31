@@ -46,6 +46,8 @@ const Add = () => {
     }
   };
 
+  console.log(state);
+
   const navigate = useNavigate();
 
   const queryClient = useQueryClient();
@@ -56,13 +58,13 @@ const Add = () => {
     },
     onSuccess: () => {
       queryClient.invalidateQueries(["myGigs"]);
+      navigate("/mygigs");
     },
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    mutation.mutate(state);
-    // navigate("/mygigs")
+    await mutation.mutateAsync(state);
   };
 
   return (
